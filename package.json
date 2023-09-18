@@ -1,0 +1,21 @@
+{
+  "name": "aquatrack",
+  "version": "1.0.0",
+  "description": "app the track water",
+  "main": "/lib/main.dart",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "appication",
+    "tracker",
+    "write",
+    "aqua"
+  ],
+  "author": "andrescondo",
+  "license": "ISC"
+}
