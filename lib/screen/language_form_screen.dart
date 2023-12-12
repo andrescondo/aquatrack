@@ -21,27 +21,28 @@ class _LanguageScreenState extends State<LanguageScreen> {
           actions: [
             IconButton(
                 onPressed: () {
-                  if (_isRadioSelected != '') {
+                  if (_isRadioSelected == '') {
+                    Platform.isAndroid
+                        ? showDialogAlert(
+                            context: context,
+                            title: 'Hay un error',
+                            content: const Text('Selecione un Idioma'),
+                            isAcction: false,
+                            actions: TextButton(
+                                onPressed: () {}, child: const Text('Guardar')))
+                        : showIosAlertDialog(
+                            context: context,
+                            title: 'Hay un error',
+                            content: const Text('Selecione un Idioma'),
+                            isAcction: false,
+                            actions: TextButton(
+                                onPressed: () {},
+                                child: const Text('Guardar')));
+
                     return;
                   }
 
-                  if (Platform.isAndroid) {
-                    showDialogAlert(
-                        context: context,
-                        title: 'Hay un error',
-                        content: const Text('Selecione un Idioma'),
-                        isAcction: true,
-                        actions: TextButton(
-                            onPressed: () {}, child: const Text('Guardar')));
-                  } else {
-                    showIosAlertDialog(
-                        context: context,
-                        title: 'Hay un error',
-                        content: const Text('Selecione un Idioma'),
-                        isAcction: true,
-                        actions: TextButton(
-                            onPressed: () {}, child: const Text('Guardar')));
-                  }
+                  Navigator.pushNamed(context, '/welcome');
                 },
                 icon: const Icon(Icons.check))
           ],
