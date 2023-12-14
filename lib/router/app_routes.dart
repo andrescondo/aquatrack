@@ -7,7 +7,7 @@ import 'package:aquatrack/models/menu_option.dart';
 
 
 class AppRoutes {
-  static const initialRoute = '/language';
+  static const initialRoute = '/login';
 
   static final menuOptions = <MenuOption>[
     //    MenuOption(title:'Home', iconData: Icons.home),
@@ -15,6 +15,11 @@ class AppRoutes {
         route: '/',
         name: 'Home',
         screen: const HomeScreen(),
+        icon: Icons.home_max_outlined),
+    MenuOption(
+        route: '/login',
+        name: 'Login',
+        screen:  LoginScreen(),
         icon: Icons.home_max_outlined),
     MenuOption(
         route: '/language',

@@ -38,6 +38,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   getwidget: ^4.0.0
   flutter_material_pickers: ^3.6.0
+  flutter_form_builder: ^9.1.1
+  flutter_localizations:
+    sdk: flutter
+  form_builder_validators: ^9.0.0
+  firebase_auth: ^4.15.3
 
 dev_dependencies:
   flutter_test:
